@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0owi3uah86dn"]
+
+[ext_resource type="Texture2D" uid="uid://cktoy01lgdqgc" path="res://paintEnemy.png" id="1_1ej3a"]
+[ext_resource type="Script" path="res://enemy.cs" id="1_kmax8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_levol"]
+radius = 62.3939
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqc5o"]
+size = Vector2(91.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bioml"]
+size = Vector2(136, 20)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_kmax8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1ej3a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_levol")
+
+[node name="DeathDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathDetector"]
+position = Vector2(-1.25, -62)
+shape = SubResource("RectangleShape2D_mqc5o")
+
+[node name="WallDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector"]
+shape = SubResource("RectangleShape2D_bioml")
+
+[connection signal="body_entered" from="DeathDetector" to="." method="OnDeathDetectorBodyEntered"]
+[connection signal="body_entered" from="WallDetector" to="." method="OnWallDetectorBodyEntered"]

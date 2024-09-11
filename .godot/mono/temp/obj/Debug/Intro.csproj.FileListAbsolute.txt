@@ -1,0 +1,17 @@
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\bin\Debug\Intro.deps.json
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\bin\Debug\Intro.runtimeconfig.json
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\bin\Debug\Intro.dll
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\bin\Debug\Intro.pdb
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\Intro.csproj.AssemblyReference.cache
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\Intro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\Intro.AssemblyInfoInputs.cache
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\Intro.AssemblyInfo.cs
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\Intro.csproj.CoreCompileInputs.cache
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\Intro.csproj.CopyComplete
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\Intro.dll
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\refint\Intro.dll
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\Intro.pdb
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\Intro.genruntimeconfig.cache
+C:\Workspace Godot\2024-2025\Godot intro\.godot\mono\temp\obj\Debug\ref\Intro.dll

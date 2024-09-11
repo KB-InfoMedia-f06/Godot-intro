@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://df37tsfkn8f74"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_klyp4"]
+[ext_resource type="PackedScene" uid="uid://uj4rncwy37im" path="res://player.tscn" id="2_vsqtg"]
+[ext_resource type="Texture2D" uid="uid://bqkadvfbkafuw" path="res://GroundTile.png" id="3_ysbet"]
+[ext_resource type="PackedScene" uid="uid://b0owi3uah86dn" path="res://enemy.tscn" id="4_k8pi0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4alju"]
+texture = ExtResource("3_ysbet")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
+0:0/1 = 1
+0:0/1/modulate = Color(0, 0.596078, 0.596078, 1)
+0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/1/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 19, -6.5, 28, 11, 26, 32, 14.5, 32, -32)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_thnoq"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4alju")
+
+[node name="Main" type="Node"]
+script = ExtResource("1_klyp4")
+enemyScene = ExtResource("4_k8pi0")
+
+[node name="Player" parent="." instance=ExtResource("2_vsqtg")]
+position = Vector2(447, 316)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_thnoq")
+format = 2
+layer_0/tile_data = PackedInt32Array(589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 65536, 1, 589834, 65536, 1, 589835, 65536, 1, 589836, 65536, 1, 589837, 65536, 1, 589838, 65536, 1, 589839, 0, 0, 589824, 0, 0, 524288, 0, 0, 524287, 0, 0, 458751, 0, 0, 393215, 0, 0, 458752, 0, 0, 589823, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 0, 0, 589857, 0, 0, 589858, 0, 0, 458768, 0, 0, 524304, 0, 0, 458786, 0, 0, 524322, 0, 0)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="EnemySpawn" type="Marker2D" parent="."]
+position = Vector2(1246, 404)
+
+[node name="Timer" type="Timer" parent="EnemySpawn"]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
+[connection signal="timeout" from="EnemySpawn/Timer" to="." method="OnEnemySpawnTimerTimeout"]
