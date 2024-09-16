@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace Godot\\2024-2025\\Godot intro\\Intro.csproj": {}
+    "C:\\Workspace Godot\\2024-2025\\Godot-intro\\Intro.csproj": {}
   },
   "projects": {
-    "C:\\Workspace Godot\\2024-2025\\Godot intro\\Intro.csproj": {
+    "C:\\Workspace Godot\\2024-2025\\Godot-intro\\Intro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace Godot\\2024-2025\\Godot intro\\Intro.csproj",
+        "projectUniqueName": "C:\\Workspace Godot\\2024-2025\\Godot-intro\\Intro.csproj",
         "projectName": "Intro",
-        "projectPath": "C:\\Workspace Godot\\2024-2025\\Godot intro\\Intro.csproj",
+        "projectPath": "C:\\Workspace Godot\\2024-2025\\Godot-intro\\Intro.csproj",
         "packagesPath": "C:\\Users\\aahanjoh\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace Godot\\2024-2025\\Godot intro\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "C:\\Workspace Godot\\2024-2025\\Godot-intro\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aahanjoh\\AppData\\Roaming\\NuGet\\NuGet.Config",
